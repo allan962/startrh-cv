@@ -24,21 +24,8 @@ Retorne APENAS o JSON, sem nenhum texto antes ou depois, sem markdown, sem expli
   "cidade": "",
   "linkedin": "",
   "resumo": "",
-  "experiencias": [
-    {
-      "cargo": "",
-      "empresa": "",
-      "periodo": "",
-      "descricao": ""
-    }
-  ],
-  "formacao": [
-    {
-      "curso": "",
-      "instituicao": "",
-      "periodo": ""
-    }
-  ],
+  "experiencias": [{"cargo": "","empresa": "","periodo": "","descricao": ""}],
+  "formacao": [{"curso": "","instituicao": "","periodo": ""}],
   "idiomas": [""],
   "habilidades": [""],
   "cursos": [""]
@@ -58,10 +45,7 @@ Retorne APENAS o JSON, sem nenhum texto antes ou depois, sem markdown, sem expli
         messages: [{
           role: 'user',
           content: [
-            {
-              type: 'document',
-              source: { type: 'base64', media_type: 'application/pdf', data: pdfBase64 }
-            },
+            { type: 'document', source: { type: 'base64', media_type: 'application/pdf', data: pdfBase64 } },
             { type: 'text', text: prompt }
           ]
         }]
